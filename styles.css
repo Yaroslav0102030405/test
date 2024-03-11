@@ -1,0 +1,156 @@
+/* kumbh-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/kumbh-sans-v22-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* kumbh-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/kumbh-sans-v22-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* kumbh-sans-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/kumbh-sans-v22-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --title-color: #333461;
+  --text-color: #4a556c;
+
+  --bg-color: #20ad96;
+}
+
+/* Создание контейнера ----------- */
+.container {
+  max-width: 1270px;
+  /* width: 1600px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 380px) {
+  container {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  container {
+    width: 1170px;
+  }
+}
+
+/* Личный нормализатор -------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  padding: 0;
+  /* padding: 0;
+    margin: 0; */
+  /* color: var(--title-color); */
+}
+
+/* чтоб можно было задать геометрию -------- */
+a {
+  display: block;
+  text-decoration: none;
+  font-style: normal;
+
+  /* cursor: url("../image/cursor-hand.png"), auto; */
+}
+
+/* button {
+  cursor: url("../image/cursor-hand.png"), auto;
+} */
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Зброс зазора */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* .container {
+  width: 1270px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wapper2 {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.header__list {
+  gap: 30px;
+}
+
+.header__list li a {
+  color: var(--text-color);
+  padding: 11px 16px 11px 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.wapper__btn {
+  /* display: flex; */
+  margin-left: 30px;
+}
+
+.btn {
+  padding: 11px 16px 11px 16px;
+  font-size: 14px;
+  line-height: 18.2px;
+  font-weight: 600;
+  background-color: var(--bg-color);
+  color: #fff;
+  border: none;
+}
