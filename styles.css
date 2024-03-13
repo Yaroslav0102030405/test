@@ -28,6 +28,7 @@
   --text-color: #4a556c;
 
   --bg-color: #20ad96;
+  --bg-hero: #FAF8F6;
 }
 
 /* Создание контейнера ----------- */
@@ -40,20 +41,20 @@
 }
 
 @media screen and (min-width: 380px) {
-  container {
+  .container {
     width: 360px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  container {
-    width: 768px;
+@media screen and (min-width: 900px) {
+  .container {
+    width: 900px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  container {
-    width: 1170px;
+  .container {
+    width: 1270px;
   }
 }
 
@@ -67,9 +68,6 @@ h6,
 p {
   margin-top: 0;
   padding: 0;
-  /* padding: 0;
-    margin: 0; */
-  /* color: var(--title-color); */
 }
 
 /* чтоб можно было задать геометрию -------- */
@@ -77,13 +75,8 @@ a {
   display: block;
   text-decoration: none;
   font-style: normal;
-
-  /* cursor: url("../image/cursor-hand.png"), auto; */
 }
 
-/* button {
-  cursor: url("../image/cursor-hand.png"), auto;
-} */
 
 ul {
   padding: 0;
@@ -97,12 +90,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-/* .container {
-  width: 1270px;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 .header {
   padding-top: 10px;
@@ -140,9 +127,20 @@ img {
   font-size: 15px;
 }
 
+.header-item:focus,
+.header-item:hover {
+ color: var(--bg-color);
+}
+
 .wapper__btn {
   /* display: flex; */
   margin-left: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .wapper2 {
+    display: none;
+  }
 }
 
 .btn {
@@ -152,5 +150,225 @@ img {
   font-weight: 600;
   background-color: var(--bg-color);
   color: #fff;
+  border-radius: 10px;
   border: none;
+  cursor: pointer;
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: var(--text-color);
+}
+
+/* section hero */
+.hero {
+  padding-top: 100px;
+  padding-bottom: 0;
+  background-color: var(--bg-hero);
+  height: 536px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .hero {
+height: 990px;
+  }
+}
+
+/* @media screen and (min-width: 901px) and (max-width: 1269px) {
+  .hero {
+height: 534px;
+  }
+} */
+
+@media screen and (min-width: 1270px) {
+  .hero {
+height: 680px;
+  }
+}
+
+.btn2 {
+padding: 11px 42px 11px 42px;
+}
+
+@media screen and (max-width: 900px) {
+  .btn2 {
+    margin-bottom: 90px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wapper-hero {
+   display: block;
+   /* display: inline-block; */
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .wapper-hero {
+    display: flex;
+    /* flex-wrap: wrap; */
+  }
+}
+
+.hero-position {
+  position: relative;
+}
+
+
+.hero-position > .vector {
+  position: absolute;
+  top: -70px;
+  left: -46px;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .hero-position > .vector {
+   left: 2px;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1269px) {
+  .hero-position > .vector {
+   left: -4px;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1269px) {
+  .hero-left {
+   /* margin-right: 150px; */
+   justify-content: space-between;
+  }
+}
+
+
+
+.hero-text-top {
+  margin-top: 30px;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-title {
+    max-width: 354px;
+    font-weight: 800;
+    font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .hero-title {
+    max-width: 520px;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 86.4px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-text {
+    max-width: 340px;
+    font-size: 18px;
+    line-height: 28.2px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .hero-text {
+    max-width: 539px;
+    /* font-weight: 800; */
+    line-height: 28.8px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .hero-right {
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wapper2 {
+    margin-left: 0;
+  }
+}
+
+.box {
+  cursor: url('/images/Group\ 42911.png'), auto;
+}
+
+.box-relative {
+  position: relative;
+}
+
+  .box-relative >.box {
+  position: absolute;
+  top: -45px;
+  left: -100px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  width: 212px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .box-relative >.box {
+    margin: 0;
+    top: -30px;
+  right: 0;
+  left: -2px;
+  padding: 7px;
+  width: 170px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero-image {
+   width: 300px;
+   height: 370px;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .hero-image {
+   width: 350px;
+   height: 450px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .hero-image {
+   width: 462px;
+   height: 603px;
+  }
+}
+
+.box100 {
+  font-weight: 800;
+font-size: 24px;
+line-height: 32px;
+color: var(--title-color);
+}
+
+.box-text {
+margin-bottom: 0;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
