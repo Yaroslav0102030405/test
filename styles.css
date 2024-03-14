@@ -26,21 +26,23 @@
 :root {
   --title-color: #333461;
   --text-color: #4a556c;
-
   --bg-color: #20ad96;
   --bg-hero: #FAF8F6;
+
+  /* --mobile: 360px;
+  --tablet: 900px;
+  --desktop: 1270px; */
 }
 
 /* Создание контейнера ----------- */
 .container {
   max-width: 1270px;
-  /* width: 1600px; */
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 360px) {
   .container {
     width: 360px;
   }
@@ -52,7 +54,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1270px) {
   .container {
     width: 1270px;
   }
@@ -115,11 +117,11 @@ img {
   display: flex;
 }
 
-.header__list {
+.list {
   gap: 30px;
 }
 
-.header__list li a {
+.list li a {
   color: var(--text-color);
   padding: 11px 16px 11px 16px;
   line-height: 24px;
@@ -127,8 +129,8 @@ img {
   font-size: 15px;
 }
 
-.header-item:focus,
-.header-item:hover {
+.list__item:focus,
+.list__item:hover {
  color: var(--bg-color);
 }
 
@@ -175,15 +177,9 @@ height: 990px;
   }
 }
 
-/* @media screen and (min-width: 901px) and (max-width: 1269px) {
+@media screen and (min-width: 900px) and (min-width: 1270px) {
   .hero {
-height: 534px;
-  }
-} */
-
-@media screen and (min-width: 1270px) {
-  .hero {
-height: 680px;
+height: 677px;
   }
 }
 
@@ -198,25 +194,23 @@ padding: 11px 42px 11px 42px;
 }
 
 @media screen and (max-width: 900px) {
-  .wapper-hero {
+  .hero__wapper {
    display: block;
-   /* display: inline-block; */
   }
 }
 
 @media screen and (min-width: 900px) {
-  .wapper-hero {
+  .hero__wapper {
     display: flex;
-    /* flex-wrap: wrap; */
   }
 }
 
-.hero-position {
+.hero__position {
   position: relative;
 }
 
 
-.hero-position > .vector {
+.hero__position > .vector {
   position: absolute;
   top: -70px;
   left: -46px;
@@ -224,47 +218,46 @@ padding: 11px 42px 11px 42px;
 }
 
 @media screen and (max-width: 900px) {
-  .hero-position > .vector {
+  .hero__position > .vector {
    left: 2px;
   }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1269px) {
-  .hero-position > .vector {
+  .hero__position > .vector {
    left: -4px;
   }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1269px) {
-  .hero-left {
-   /* margin-right: 150px; */
+  .hero__left {
    justify-content: space-between;
   }
 }
 
 
 
-.hero-text-top {
+.hero__top {
   margin-top: 30px;
   color: var(--text-color);
   font-size: 16px;
   line-height: 24px;
 }
 
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 1200px) {
-  .hero-title {
-    max-width: 354px;
+@media screen and (max-width: 1269px) {
+  .hero__title {
+    max-width: 339px;
     font-weight: 800;
     font-size: 38px;
   }
 }
 
-@media screen and (min-width: 1201px) {
-  .hero-title {
+@media screen and (min-width: 1270px) {
+  .hero__title {
     max-width: 520px;
   font-weight: 800;
   font-size: 72px;
@@ -272,25 +265,24 @@ padding: 11px 42px 11px 42px;
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .hero-text {
+@media screen and (max-width: 1269px) {
+  .hero__text {
     max-width: 340px;
     font-size: 18px;
     line-height: 28.2px;
   }
 }
 
-@media screen and (min-width: 1201px) {
-  .hero-text {
+@media screen and (min-width: 1270px) {
+  .hero__text {
     max-width: 539px;
-    /* font-weight: 800; */
     line-height: 28.8px;
     font-size: 18px;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .hero-right {
+  .hero__right {
     margin-left: 150px;
   }
 }
@@ -309,7 +301,7 @@ padding: 11px 42px 11px 42px;
   position: relative;
 }
 
-  .box-relative >.box {
+  .box__position >.box {
   position: absolute;
   top: -45px;
   left: -100px;
@@ -323,7 +315,7 @@ padding: 11px 42px 11px 42px;
 }
 
 @media screen and (max-width: 900px) {
-  .box-relative >.box {
+  .box-position >.box {
     margin: 0;
     top: -30px;
   right: 0;
@@ -334,25 +326,19 @@ padding: 11px 42px 11px 42px;
 }
 
 @media screen and (max-width: 900px) {
-  .hero-image {
+  .hero__image {
    width: 300px;
    height: 370px;
   }
 }
 
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  .hero-image {
+@media screen and (min-width: 901px) and (max-width: 1270px) {
+  .hero__image {
    width: 350px;
    height: 450px;
   }
 }
 
-@media screen and (min-width: 1201px) {
-  .hero-image {
-   width: 462px;
-   height: 603px;
-  }
-}
 
 .box100 {
   font-weight: 800;
@@ -361,7 +347,7 @@ line-height: 32px;
 color: var(--title-color);
 }
 
-.box-text {
+.box__text {
 margin-bottom: 0;
   font-size: 12px;
   line-height: 24px;
