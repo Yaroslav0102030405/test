@@ -317,7 +317,7 @@ padding: 11px 42px 11px 42px;
 @media screen and (max-width: 900px) {
   .box__position >.box {
     margin: 0;
-    top: -30px;
+    top: -35px;
   right: 0;
   left: -2px;
   padding: 7px;
