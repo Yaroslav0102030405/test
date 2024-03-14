@@ -195,7 +195,10 @@ padding: 11px 42px 11px 42px;
 
 @media screen and (max-width: 900px) {
   .hero__wapper {
-   display: block;
+   /* display: block; */
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
   }
 }
 
