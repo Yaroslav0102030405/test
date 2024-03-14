@@ -349,7 +349,7 @@ color: var(--title-color);
 
 .box__text {
 margin-bottom: 0;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 24px;
   color: var(--text-color);
 }
